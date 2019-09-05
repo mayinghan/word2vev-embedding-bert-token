@@ -1,6 +1,10 @@
 # virtual env
 venv/
+__*__
 
-$ temp files
+# temp files
 *.*~
 \#*
+.vscode/
+# dataset
+*.all0.txt
