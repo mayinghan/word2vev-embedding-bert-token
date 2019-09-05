@@ -8,3 +8,4 @@ __*__
 .vscode/
 # dataset
 *.all0.txt
+*.txt
