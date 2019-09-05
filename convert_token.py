@@ -13,8 +13,7 @@ def convert_corpus_to_tokens(filepath):
         new_token_sentence = ' '.join(token_list) + '\n'
         w.write(new_token_sentence)
       
-        
-    
+      
 def tokenize(word) -> list:
   tokenizer = BertTokenizer.from_pretrained('bert-base-cased'
                 , do_lower_case=False)
