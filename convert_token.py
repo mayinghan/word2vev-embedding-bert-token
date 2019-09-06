@@ -2,18 +2,19 @@ import os
 import sys
 import string
 import re
+from tqdm import tqdm
 
 from pytorch_transformers import BertTokenizer
 
 def convert_corpus_to_tokens(filepath):
   with open('tokened_mimic.txt', 'w') as w:
     with open(filepath, 'r') as f:
-      for line in f:
+      for line in tqdm(f, desc="line"):
         token_list = tokenize(line)
         new_token_sentence = ' '.join(token_list) + '\n'
         w.write(new_token_sentence)
       
-      
+
 def tokenize(word) -> list:
   tokenizer = BertTokenizer.from_pretrained('bert-base-cased'
                 , do_lower_case=False)
