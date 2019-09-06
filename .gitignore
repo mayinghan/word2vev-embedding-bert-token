@@ -9,3 +9,5 @@ __*__
 # dataset
 *.all0.txt
 *.txt
+
+!requirement.txt
